@@ -1,0 +1,22 @@
+{
+  "name": "cypress-setup",
+  "version": "1.0.0",
+  "description": "This repository highlights the complete setup and configuration for a Cypress project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ethan0507/cypress-setup.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ethan0507/cypress-setup/issues"
+  },
+  "homepage": "https://github.com/Ethan0507/cypress-setup#readme",
+  "devDependencies": {
+    "cypress": "^8.5.0"
+  }
+}
