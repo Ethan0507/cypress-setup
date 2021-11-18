@@ -1,0 +1,42 @@
+{
+    "auth": {
+        "username": "<Your BrowserStack username>",
+        "access_key": "<Your BrowserStack access key>"
+    },
+    "browsers": [
+        {
+            "browser": "chrome",
+            "os": "Windows 10",
+            "versions": [
+                "latest"
+            ]
+        },
+        {
+            "browser": "firefox",
+            "os": "Windows 10",
+            "versions": [
+                "latest"
+            ]
+        },
+        {
+            "browser": "chrome",
+            "os": "OS X Catalina",
+            "versions": [
+                "latest"
+            ]
+        },
+        {
+            "browser": "firefox",
+            "os": "OS X Catalina",
+            "versions": [
+                "latest"
+            ]
+        }
+    ],
+    "run_settings": {
+        "cypress_config_file": "./cypress.json",
+        "project_name": "YOUR_PROJECT_NAME",
+        "build_name": "YOUR_BUILD_NAME",
+        "parallels": "5"
+    }
+}
