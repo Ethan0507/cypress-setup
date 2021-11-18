@@ -104,6 +104,7 @@ jobs:
       - name: 'Running test on BrowserStack'  # Invokes the actual test script that would run on BrowserStack browsers
         run: browserstack-cypress run --sync  # See sample test script above
 ```
+
 And that's about it! <br>
 **You can go ahead and make a push or create a pull request on your forked repository and see your cypress tests in action**
 
