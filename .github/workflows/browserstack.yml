@@ -11,7 +11,6 @@ jobs:
         with:
           username:  ${{ secrets.BROWSERSTACK_USERNAME }}
           access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
 # The next 3 steps are for building the web application to be tested and starting the web server on the runner environment
 
@@ -28,4 +27,4 @@ jobs:
         run: npm install -g @percy/cli
 
       - name: 'Running test on BrowserStack'  # Invokes the actual test script that would run on BrowserStack browsers
-        run: npx percy exec -- browserstack-cypress run --sync  # See sample test script above
+        run: PERCY_TOKEN=${{ secrets.PERCY_TOKEN }} npx percy exec -- browserstack-cypress run --sync  # See sample test script above
