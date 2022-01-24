@@ -30,4 +30,4 @@ jobs:
         run: git checkout cypress-with-percy
 
       - name: 'Running test on BrowserStack'  # Invokes the actual test script that would run on BrowserStack browsers
-        run: PERCY_TARGET_COMMIT=76dec047f971fe7f057335ba978eab04e7121322 PERCY_TOKEN=${{ secrets.PERCY_TOKEN }} npx percy exec -- browserstack-cypress run --sync  # See sample test script above
+        run: PERCY_TARGET_BRANCH=cypress-with-percy PERCY_TARGET_COMMIT=76dec047f971fe7f057335ba978eab04e7121322 PERCY_TOKEN=${{ secrets.PERCY_TOKEN }} npx percy exec -- browserstack-cypress run --sync  # See sample test script above
