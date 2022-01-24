@@ -22,6 +22,9 @@ jobs:
 
       - name: 'Installing browserstack-cypress-cli'
         run: npm install -g browserstack-cypress-cli
+        
+      - name: 'Installing percy-cli'
+        run: npm install -g @percy/cli
 
       - name: 'Running test on BrowserStack'  # Invokes the actual test script that would run on BrowserStack browsers
-        run: browserstack-cypress run --sync  # See sample test script above
+        run: npx percy exec -- browserstack-cypress run --sync  # See sample test script above
