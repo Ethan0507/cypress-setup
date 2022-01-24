@@ -37,6 +37,13 @@
         "cypress_config_file": "./cypress.json",
         "project_name": "YOUR_PROJECT_NAME",
         "build_name": "YOUR_BUILD_NAME",
-        "parallels": "5"
+        "parallels": "5",
+        "npm_dependencies": {
+            "@percy/cli": "^1.0.0-beta.71",
+            "@percy/cypress": "^3.1.1"
+        }
+    },
+    "connection_settings": {
+        "local": true
     }
 }

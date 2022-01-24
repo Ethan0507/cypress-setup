@@ -26,6 +26,9 @@ describe('example to-do app', () => {
     // which are the two default items.
     cy.get('.todo-list li').should('have.length', 2)
 
+
+    cy.percySnapshot('First snapshot');
+
     // We can go even further and check that the default todos each contain
     // the correct text. We use the `first` and `last` functions
     // to get just the first and last matched elements individually,
@@ -46,6 +49,10 @@ describe('example to-do app', () => {
     // https://on.cypress.io/selecting-elements
     cy.get('[data-test=new-todo]').type(`${newItem}{enter}`)
 
+
+    cy.percySnapshot('Second snapshot');
+
+
     // Now that we've typed our new item, let's check that it actually was added to the list.
     // Since it's the newest item, it should exist as the last element in the list.
     // In addition, with the two default items, we should have a total of 3 elements in the list.
@@ -55,6 +62,8 @@ describe('example to-do app', () => {
       .should('have.length', 3)
       .last()
       .should('have.text', newItem)
+
+    
   })
 
   it('can check off an item as completed', () => {
@@ -69,6 +78,9 @@ describe('example to-do app', () => {
       .find('input[type=checkbox]')
       .check()
 
+
+      cy.percySnapshot('Third snapshot');
+
     // Now that we've checked the button, we can go ahead and make sure
     // that the list element is now marked as completed.
     // Again we'll use `contains` to find the <label> element and then use the `parents` command
@@ -77,6 +89,8 @@ describe('example to-do app', () => {
     cy.contains('Pay electric bill')
       .parents('li')
       .should('have.class', 'completed')
+
+    
   })
 
   context('with a checked task', () => {
